@@ -1,189 +1,107 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
+import logo from "../images/csi-logo.png"
+import gqlIcon from "../images/graphql-icon.png"
+import saIcon from "../images/software-architecture-icon.png"
+import tsIcon from "../images/typescript-icon.png"
 
+// styles
 const pageStyles = {
+  backgroundColor: "#FFFFFF",
   color: "#232129",
-  padding: 96,
+  paddingBottom: '50px',
+  paddingTop: '50px',
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const doclistStyles = {
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
+
+const h2Styles = {
+  fontSize: "18px",
 }
 
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
+const logoStyles = {
+  width: "50%",
 }
 
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  display: `inline-block`,
-  marginBottom: 24,
-  marginRight: 12,
+const goalImgContainerStyles = {
+  paddingRight: "15px",
 }
 
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
+const goalImgStyles = {
+  maxHeight: "100px",
+  maxWidth: "100px",
 }
 
-const docLinks = [
-  {
-    text: "TypeScript Documentation",
-    url: "https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/",
-    color: "#8954A8",
-  },
-  {
-    text: "GraphQL Typegen Documentation",
-    url: "https://www.gatsbyjs.com/docs/how-to/local-development/graphql-typegen/",
-    color: "#8954A8",
-  }
-]
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative" as "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
+const goalStyles = {
+  display: "flex",
 }
-
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/getting-started/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this page
-        update in real-time. 😎
-      </p>
-      <ul style={doclistStyles}>
-        {docLinks.map(doc => (
-          <li key={doc.url} style={docLinkStyle}>
-            <a
-              style={linkStyle}
-              href={`${doc.url}?utm_source=starter&utm_medium=ts-docs&utm_campaign=minimal-starter-ts`}
-            >
-              {doc.text}
-            </a>
-          </li>
-        ))}
-      </ul>
-      <ul style={listStyles}>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter-ts`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
+      <div id="content">
+        <title>Clear Software Co-op Summer 2023 Work Term Report</title>
+
+        <div id="logo-wrapper">
+          <img src={logo} style={logoStyles} alt="Clear Software Logo" />
+        </div>
+        
+        <h1 id="heading">Clear Software Co-op Summer 2023 Work Term Report</h1>
+
+        <h2 style={h2Styles}>Introduction</h2>
+
+        <p>My name is Greg French. I&lsquo;m a 5th-year computer science co-op student at the University of Guelph. The following is the final report for my 5th co-op work term, highlighting my experience at Clear Software over the summer of 2023, as well as giving an overview of the goals I had made at the beginning of the term and my progress in achieving them.</p>
+
+        <h2 style={h2Styles}>About Clear Software</h2>
+
+        <p>Clear Software is a software development company based out of Waterloo Ontario. The company builds custom software solutions for clients around the world. The company is fully remote with most employees working from home in and around Southwestern Ontario. The main channel of communication was through Slack. Slack offers the convenience of quickly messaging colleagues for various needs, such as help with a software issue or requesting access to a company resource. The team is always friendly and ready to assist at a moment's notice. Additionally, the team met virtually at the beginning of every week through Google Meet to discuss pending issues and what work needed to be prioritized in the week ahead. Google Meet was also used for individual discussions when voice/video conversations were more efficient for discussing ideas and software features/bugs than solely relying on text.</p>
+
+        <h2 style={h2Styles}>Job Description</h2>
+
+        <p>As a software developer at Clear Software, the bulk of my work came in the form of writing software on the server for the web application that Clear Software was building for McKellar. McKellar is a structured settlement firm conveniently located in Guelph, Ontario. Clear Software was working with McKellar to build out a new web application to help modernize their existing software systems. At the time I joined the company, the project was nearly complete and sprinting head-first toward the finish line, with just a few pieces missing before the first major phase of the project could conclude.</p>
+
+        <p>After the reporting work was put on hold, I was tasked with working on another big project. The project involved the automatic filling in of structured settlement annuity applications that McKellar uses in conjunction with companies such as BMO, Canada Life, and Sun Life. These applications come in the form of pre-built PDF templates with blank text fields that need to be filled in for each annuity application. This involved using the PDF-Lib library to read in a PDF template, extract the text fields, and fill them in with data from the database. This was a very involved process as it required understanding a complex data model to understand what data is required for each field and what database tables are needed to fill it, as well as filling in/testing many different PDF templates. Each life insurance company had two different annuity application types associated with them (one for tort and one for no-fault) and they were offered in both English and French.</p>
+
+        <p>Another project that I worked on during my time at Clear Software was the automatic updating of TeamWork task lists. TeamWork is a project management platform used by Clear Software to manage each project the company works on. This involves creating tasks within individual task lists that are then assigned to members of the team who have the requisite skill sets to complete them. The project that I worked on involved updating the task list titles to add the total budget, the estimated time to complete all tasks, and the total time taken for each task inside of each task list for a given project. This was done by utilizing the TeamWork API to get all task lists within a project, get all tasks within a task list, and then get all time entries submitted for each task. Node and TypeScript were used for the project to fetch, process, and then update the data through the API. Automated tests and code linting were also used to ensure that the code was both accurate and clean.</p>
+
+        <h2 style={h2Styles}>Goals</h2>
+
+        <p>Around the beginning of my co-op term, I made three 3 different goals that I would work to achieve throughout the term. The following are those goals:</p>
+
+        <div style={goalStyles}>
+          <div style={goalImgContainerStyles}>
+           <p><img src={tsIcon} style={goalImgStyles} alt="TypeScript Icon" /></p>
+          </div>
+          <div>
+            <p><strong>Get better at TypeScript -</strong> My first goal was to get better at TypeScript. Before starting at Clear Software, I only had a brief experience with the technology, using it as part of an Angular app that my previous co-op employer was using to monitor their larger mobile app. At Clear, I was able to get a much deeper and richer experience with TypeScript, using it in the vast majority of the software I wrote over the term. I really enjoyed the process of adding explicit types to the JavaScript code I wrote. It enabled me to catch potential bugs more quickly and made the development experience overall more enjoyable.</p>
+          </div>
+        </div>
+
+        <div style={goalStyles}>
+          <div style={goalImgContainerStyles}>
+            <p><img src={saIcon} style={goalImgStyles} alt="Software Architecture Icon" /></p>
+          </div>
+          <div>
+            <p><strong>Improve software architecture skills -</strong> My second goal was to improve my software architecture skills. This includes aspects such as OO design, file structure layout, and use of design patterns. I’ve felt this aspect of my abilities grow tremendously as I’ve improved in my use of classes, custom types, and interfaces for OO design. I’ve gotten better at structuring the layout of files to ensure that the right code goes in the right places. Places that make it easy to extend, re-use and build off of in the future. I’ve also improved my use of design patterns, especially when it comes to the factory pattern and its ability to produce objects of different types on the fly when needed.</p>
+          </div>
+        </div>
+
+        <div style={goalStyles}>
+          <div style={goalImgContainerStyles}>
+            <p><img src={gqlIcon} style={goalImgStyles} alt="GraphQL Icon" /></p>
+          </div>
+          <div>
+            <p><strong>Learn GraphQL -</strong> My third goal was to learn GraphQL. Since GraphQL is used heavily on the front end, I thought this might be a good opportunity to learn more about the technology and get my feet wet. Unfortunately, since the majority of my work revolved around work on the server, I didn’t get the chance to use GraphQL as much as I would’ve liked. However, I did get an opportunity to read through the GraphQL documentation as well as use GraphQL a little bit during the process of fixing bugs on the front end.</p>
+          </div>
+        </div>
+
+        <h2 style={h2Styles}>Conclusions</h2>
+
+        <p>In conclusion, over my past co-op work term, I was able to grow tremendously as a developer. Working at Clear Software enabled me to work day in and day out on a multitude of different technologies and platforms, and grow my skills in areas such as TypeScript and software architecture. These skills will be with me for a long time as I continue this journey along this ever-evolving software landscape.</p>
+
+        <h2 style={h2Styles}>Acknowledgments</h2>
+
+        <p>I&lsquo;d like to thank Steve Grinyer for originally hiring me and allowing me the opportunity to work at the company. I’d also like to thank the entire team for being a pleasure to deal with and always willing to help when asked. Thank you.</p>
+      </div>
     </main>
   )
 }
