@@ -102,7 +102,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
         <h2 style={h2Styles}>Acknowledgments</h2>
 
-        <p>I&lsquo;d like to thank Steve Grinyer for originally hiring me and allowing me the opportunity to work at the company. I’d also like to thank the entire team for being a pleasure to deal with and always willing to help when asked. Thank you.</p>
+        <p>I&lsquo;d like to thank Steve Grinyer for originally hiring me and allowing me the opportunity to work at the company. I&lsquo;d also like to thank the entire team for being a pleasure to deal with and always willing to help when asked. Thank you!</p>
       </div>
     </main>
   )
