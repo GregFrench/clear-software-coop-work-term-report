@@ -74,7 +74,7 @@ const IndexPage: React.FC<PageProps> = () => {
            <p><img src={tsIcon} style={goalImgStyles} alt="TypeScript Icon" /></p>
           </div>
           <div>
-            <p><strong>Get better at TypeScript -</strong> My first goal was to get better at TypeScript. Before starting at Clear Software, I only had a brief experience with the technology, using it as part of an Angular app that my previous co-op employer was using to monitor their larger mobile app. At Clear, I was able to get a much deeper and richer experience with TypeScript, using it in the vast majority of the software I wrote over the term. I really enjoyed the process of adding explicit types to the JavaScript code I wrote. It enabled me to catch potential bugs more quickly and made the development experience overall more enjoyable.</p>
+            <p><strong>Get better at TypeScript -</strong> My first goal was to get better at TypeScript. Before starting at Clear Software, I only had a brief experience with the technology, using it as part of an Angular app that my previous co-op employer was using to monitor their larger mobile app. At Clear, I was able to get a much deeper and richer experience with TypeScript, using it in the vast majority of the software I wrote over the term. I really enjoyed the process of adding explicit types to the JavaScript code I wrote. It enabled me to catch potential bugs more quickly and made the development experience overall more enjoyable. I&lsquo;ve felt my skills grow a lot with TypeScript, and I look forward to using it in my future projects.</p>
           </div>
         </div>
 
@@ -83,7 +83,7 @@ const IndexPage: React.FC<PageProps> = () => {
             <p><img src={saIcon} style={goalImgStyles} alt="Software Architecture Icon" /></p>
           </div>
           <div>
-            <p><strong>Improve software architecture skills -</strong> My second goal was to improve my software architecture skills. This includes aspects such as OO design, file structure layout, and use of design patterns. I’ve felt this aspect of my abilities grow tremendously as I’ve improved in my use of classes, custom types, and interfaces for OO design. I’ve gotten better at structuring the layout of files to ensure that the right code goes in the right places. Places that make it easy to extend, re-use and build off of in the future. I’ve also improved my use of design patterns, especially when it comes to the factory pattern and its ability to produce objects of different types on the fly when needed.</p>
+            <p><strong>Improve software architecture skills -</strong> My second goal was to improve my software architecture skills. This included aspects such as OO design, file structure layout, and use of design patterns. I&lsquo;ve felt this aspect of my abilities grow tremendously as I&lsquo;ve improved in my use of classes, custom types, and interfaces for OO design. I&lsquo;ve gotten better at structuring the layout of files to ensure that the right code goes in the right places. Places that make it easy to extend, re-use and build off of in the future. I&lsquo;ve also improved my use of design patterns, especially when it comes to the factory pattern and its ability to produce objects of different types on the fly when needed. Good software architecture skills are a must in software development, and I look forward to developing this skill in the future.</p>
           </div>
         </div>
 
@@ -92,7 +92,7 @@ const IndexPage: React.FC<PageProps> = () => {
             <p><img src={gqlIcon} style={goalImgStyles} alt="GraphQL Icon" /></p>
           </div>
           <div>
-            <p><strong>Learn GraphQL -</strong> My third goal was to learn GraphQL. Since GraphQL is used heavily on the front end, I thought this might be a good opportunity to learn more about the technology and get my feet wet. Unfortunately, since the majority of my work revolved around work on the server, I didn’t get the chance to use GraphQL as much as I would’ve liked. However, I did get an opportunity to read through the GraphQL documentation as well as use GraphQL a little bit during the process of fixing bugs on the front end.</p>
+            <p><strong>Learn GraphQL -</strong> My third goal was to learn GraphQL. Since GraphQL is used heavily on the front end, I thought this might be a good opportunity to learn more about the technology and get my feet wet. Unfortunately, since the majority of my work revolved around work on the server, I didn&lsquo;t get the chance to use GraphQL as much as I would&lsquo;ve liked. However, I did get an opportunity to read through the GraphQL documentation as well as use GraphQL a little bit during the process of fixing bugs on the front end.</p>
           </div>
         </div>
 
